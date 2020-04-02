@@ -1,0 +1,23 @@
+<h2>Course List</h2>
+<input id="inptCourse"[(ngModel)]="courseTitle"/>
+<button class="btn btn-success" (click)="addCourse(courseTitle)">
+  Create Course
+</button>
+<table class="table table-bordered">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Course Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let course of courses">
+    <a href="/layout/courses/{{course._id}}">
+      <i class="fa fa-book"></i>
+      {{course.title}}
+    </a>
+    <button class="btn btn-danger"(click)="deleteCourse(course)">
+      Delete
+    </button>
+  </tr>
+  </tbody>
+</table>

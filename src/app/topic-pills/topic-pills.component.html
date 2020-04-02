@@ -1,0 +1,5 @@
+<ul class="nav nav-pills" id="navPillsTopics">
+    <a class="nav-link active"
+       data-toggle="pill" href="#driver-details-tab" *ngFor="let topic of topics"
+       href="/course-viewer/{{courseId}}/modules/{{moduleId}}/lessons/{{lessonId}}/topics/{{topic._id}}">{{topic.title}}</a>
+</ul>
