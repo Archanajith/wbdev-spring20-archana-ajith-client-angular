@@ -4,12 +4,12 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(__dirname + '/dist/wbdv-sp20-archana-ajith-client-angular'));
+app.use(express.static(__dirname + 'wbdv-sp20-archana-ajith-client-angular'));
 
 app.get('/*', function(req,res) {
 
   res.sendFile(path.join(__dirname+
 
-    '/dist/wbdv-sp20-archana-ajith-client-angular/index.html'));});
+    'wbdv-sp20-archana-ajith-client-angular/index.html'));});
 
 app.listen(process.env.PORT || 8080);
