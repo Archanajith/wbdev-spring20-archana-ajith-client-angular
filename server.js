@@ -1,4 +1,3 @@
-
 const express = require('express');
 
 const path = require('path');
@@ -11,7 +10,6 @@ app.get('/*', function(req,res) {
 
   res.sendFile(path.join(__dirname+
 
-                         '/dist/wbdv-sp20-archana-ajith-client-angular/index.html'));});
+    '/dist/wbdv-sp20-archana-ajith-client-angular/index.html'));});
 
 app.listen(process.env.PORT || 8080);
-
