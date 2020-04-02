@@ -12,9 +12,6 @@ export class CourseTableComponent implements OnInit {
 
   courseTitle = '';
   courses = [
-    {_id: '123', title: 'Course A'},
-    {_id: '123', title: 'Course B'},
-    {_id: '123', title: 'Course C'}
   ];
   addCourse = (title) =>
     this.courses.push({_id: '234', title})
