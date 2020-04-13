@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>{{question.question}}</h2>
+
+  <div *ngIf="!buttonClick()">
+    <div class="form-check" *ngFor="let choice of question.choices">
+      <input type="radio" id={{question._id}} name="MultipleChoice" class="form-check-input"  (click)="select(choice)">
+      <label class="form-check-label" for={{question._id}}>{{choice}}</label>
+    </div>
+  </div>
+
+  <div *ngIf="buttonClick()">
+    <div *ngFor="let choice of question.choices">
+    <div class="{{getSuccessorDangerClass(choice)}} ">
+        <label><input type="radio"  name="MultipleChoice" class="form-check-input"> {{choice}}</label>
+        <i *ngIf="isCorrect(choice)" class="fa fa-check" ></i>
+        <i *ngIf="isFalse(choice)"  class="fa fa-times"></i>
+    </div>
+    </div>
+  </div>
+
+  <div class="h3">Your answer: {{question.answer}}</div>
+  <button class="btn btn-success" (click)="grade()">Grade</button>
+
+
+
+</div>
